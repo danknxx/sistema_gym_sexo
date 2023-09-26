@@ -58,8 +58,8 @@
             Inventario
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/sistema_gym/view/users/create.php">Agregar inventario</a></li>
-            <li><a class="dropdown-item" href="/sistema_gym/view/users">Listado de inventario</a></li>
+            <li><a class="dropdown-item" href="/sistema_gym/view/inventario/create.php">Agregar inventario</a></li>
+            <li><a class="dropdown-item" href="/sistema_gym/view/inventario">Listado de inventario</a></li>
           </ul>
         </li>
         </li>
