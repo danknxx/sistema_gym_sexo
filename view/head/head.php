@@ -45,8 +45,8 @@
             Roles
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/sistema_gym_github/sistema_gym/view/users/create.php">Agregar rol</a></li>
-            <li><a class="dropdown-item" href="/sistema_gym_github/sistema_gym/view/users">Listado de roles</a></li>
+            <li><a class="dropdown-item" href="/sistema_gym_github/sistema_gym/view/roles/create.php">Agregar rol</a></li>
+            <li><a class="dropdown-item" href="/sistema_gym_github/sistema_gym/view/roles">Listado de roles</a></li>
           </ul>
         </li>
         </li>
