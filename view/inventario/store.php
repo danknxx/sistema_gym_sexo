@@ -1,11 +1,16 @@
 <?php
     require_once("c://wamp64/www/sistema_gym/controller/inventarioController.php");
-    $obj = new personasController();
-    $cedula = $_POST["cedula"];
-    $nombre = $_POST["nombre"];
-    $apellido = $_POST["apellido"];
-    $fecha = $_POST["fecha"];
-    $correo = $_POST["correo"];
-    $telefono = $_POST["telefono"];
-    $obj->guardar($cedula, $nombre, $apellido, $fecha, $correo, $telefono);
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $obj = new inventarioController();
+
+        $nombre = $_POST["nombre"];
+        $estado = isset($_POST["estado"]) ? ($_POST["estado"] == 'on' ? true : false) : false;
+
+        // Obtener el ID del empleado seleccionado desde el formulario
+        $idempleados = $_POST["idempleados"]; // Asegúrate de que este sea el nombre correcto del campo en tu formulario
+
+        $obj->guardar($nombre, $estado, $idempleados);
+}
+
 ?>

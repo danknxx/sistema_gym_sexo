@@ -114,13 +114,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sistema_gym`.`inventario` (
   `idinventario` INT NOT NULL AUTO_INCREMENT,
-  `empleados_idempleados` INT NOT NULL,
+  `idempleados` INT NOT NULL,
   `nombre` VARCHAR(50) NOT NULL,
   `estado` TINYINT NOT NULL,
   PRIMARY KEY (`idinventario`),
-  INDEX `fk_inventario_empleados1_idx` (`empleados_idempleados` ASC) VISIBLE,
+  INDEX `fk_empleados1_idx` (`idempleados` ASC) VISIBLE,
   CONSTRAINT `fk_inventario_empleados1`
-    FOREIGN KEY (`empleados_idempleados`)
+    FOREIGN KEY (`idempleados`)
     REFERENCES `sistema_gym`.`empleados` (`idempleados`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

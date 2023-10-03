@@ -7,7 +7,7 @@
     <form action="update.php" method="post" autocomplete="off">
         <h2>Modificando Registro</h2>
         <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Id</label>
+            <label for="staticEmail" class="col-sm-2 col-fowm-label">Id</label>
             <div class="mb-3 row">
             <input type="text" name="id" readonly class="form-control-plaintext" id="stacticEmail" value="<?= $user[0]?>">
             </div>
