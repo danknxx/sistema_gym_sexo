@@ -75,11 +75,8 @@ CREATE TABLE IF NOT EXISTS `sistema_gym`.`empleados` (
   `apellido` VARCHAR(50) NOT NULL,
   `fecha_inicio` DATE NOT NULL,
   `telefono` INT NOT NULL,
-  `admin` TINYINT NOT NULL DEFAULT 0,
-  `clave` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`idempleados`),
   UNIQUE INDEX `idempleados_UNIQUE` (`idempleados` ASC) VISIBLE,
-  INDEX `fk_empleados_roles1_idx` (`idroles` ASC) VISIBLE,
   UNIQUE INDEX `telefono_UNIQUE` (`telefono` ASC) VISIBLE,
   UNIQUE INDEX `ci_UNIQUE` (`ci` ASC) VISIBLE,
   CONSTRAINT `fk_empleados_roles1`
@@ -118,10 +115,6 @@ CREATE TABLE IF NOT EXISTS `sistema_gym`.`inventario` (
   `nombre` VARCHAR(50) NOT NULL,
   `estado` TINYINT NOT NULL,
   PRIMARY KEY (`idinventario`),
-  INDEX `fk_empleados1_idx` (`idempleados` ASC) VISIBLE,
-  CONSTRAINT `fk_inventario_empleados1`
-    FOREIGN KEY (`idempleados`)
-    REFERENCES `sistema_gym`.`empleados` (`idempleados`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

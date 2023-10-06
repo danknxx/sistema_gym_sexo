@@ -2,7 +2,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="Color: #ffffff !important;">
     © 2023 Copyright:
-    <span>Marcelo, Daniel y Josue</span>
+    <span>MDJ</span>
   </div>
   <!-- Copyright -->
 </footer>

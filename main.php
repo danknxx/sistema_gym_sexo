@@ -1,6 +1,9 @@
 <?php
     require_once("C://wamp64/www/sistema_gym/view/head/head.php")
 ?>
+<?php
+    require_once("C://wamp64/www/sistema_gym/view/head/carrucel.php")
+?>
 
 <!-- <a class="btn btn-primary" href="/sistema_gym/view/users/create.php">Agregar Usuario</a> -->
 

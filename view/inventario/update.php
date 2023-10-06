@@ -5,7 +5,6 @@ $obj = new inventarioController();
 $id = $_POST['idinventario'];
 $nombre = $_POST['nombre'];
 $estado = $_POST['estado'];
-$id_empleado = $_POST['idempleado'];
 
-$obj->update($id, $nombre, $estado, $id_empleado);
+$obj->update($id, $nombre, $estado);
 ?>

@@ -1,19 +1,22 @@
 <?php
-    require_once("c://wamp64/www/sistema_gym/view/head/head.php");
-    require_once("c://wamp64/www/sistema_gym/controller/inventarioController.php");
-    $obj = new inventarioController();
-    $rows = $obj->index();
+require_once("c://wamp64/www/sistema_gym/view/head/head.php");
+require_once("c://wamp64/www/sistema_gym/controller/inventarioController.php");
+
+$obj = new inventarioController();
+$rows = $obj->index(); // Llamar al método index para obtener los datos de inventario
+
 ?>
+
 <div clasas="mb-3">
     <a href="/sistema_gym/view/inventario/create.php" class="btn btn-primary">Agregar</a>
-    <a href="javascript:imprimeDiv('tabla')" class="btn btn-warning" >Imprimir</a>
+    <a href="javascript:imprimeDiv('tabla')" class="btn btn-warning">Imprimir</a>
 </div>
+
 <table class="table">
     <thead>
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Empleado responsable</th>
             <th scope="col">Estado</th>
         </tr>
     </thead>
@@ -21,10 +24,9 @@
         <?php if($rows): ?>
             <?php foreach($rows as $row): ?>
                 <tr>
-                <th><?= $row['idinventario'] ?></th>
-                <th><?= $row['nombre'] ?></th>
-                <th><?= $row['empleado'] ?></th>
-                <th><?= ($row['estado'] == 1) ? 'Activo' : 'Inactivo'; ?></th>
+                    <th><?= $row['idinventario'] ?></th>
+                    <th><?= $row['nombre'] ?></th>
+                    <th><?= ($row['estado'] == 1) ? 'Activo' : 'Inactivo'; ?></th>
                     <th>
                         <a href="show.php?id=<?= $row['idinventario']?>" class="btn btn-primary">Ver</a>
                         <a href="edit.php?id=<?= $row['idinventario']?>" class="btn btn-success">Modificar</a>
@@ -60,39 +62,32 @@
     </tbody>
 </table>
 
-
 <!-- zona imprimible -->
 <div id="tabla" style="display: none">
-            <h3>LISTADO DE INVENTARIO</h3>
-            <h4>Fecha: <?=date("d-m-Y");?></h4>
-            <h4>Hora: <?=date("h:i:s");?></h4>
-            <hr>
-            <table class="table">
-                <thead>
+    <h3>LISTADO DE INVENTARIO</h3>
+    <h4>Fecha: <?=date("d-m-Y");?></h4>
+    <h4>Hora: <?=date("h:i:s");?></h4>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if($rows): ?>
+                <?php foreach($rows as $row): ?>
                     <tr>
-                        <th scope="col">Código</th>
-                        <th scope="col">Nombre</th>
+                        <th><?= $row['idinventario'] ?></th>
+                        <th><?= $row['nombre'] ?></th>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php if($rows): ?>
-                        <?php foreach($rows as $rows): ?>
-                            <tr>
-                                <th><?= $rows[0] ?></th>
-                                <th><?= $rows[2] ?></th>
-                            </tr>
-                        <?php endforeach;
-                            endif; ?>
-                </tbody>
-            </table>
-        </div>
-        <!-- fin imprimible -->
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
+<!-- fin imprimible -->
 <?php
-    require_once("c://wamp64/www/sistema_gym/view/head/footer.php");
-?>
-
-
-
-<?php
-    require_once("c://wamp64/www/sistema_gym/view/head/footer.php");
+require_once("c://wamp64/www/sistema_gym/view/head/footer.php");
 ?>

@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GYM SUPREME</title>
+    <title>pipoc gym</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="/sistema_gym/css/index.css">
-    
-    <script src="/sistema_gym/js/exportpdf.js"></script>
-    
+    <link rel="stylesheet" href="/hospedajes/css/index.css">
+    <script src="/hospedajes/js/exportpdf.js"></script>
 </head>
 
-<!-- <a class="btn btn-primary" href="/crudphp/view/users/create.php">Agregar usuario</a> -->
-
-<section class="h-100 gradient-form" style="background-color: #eee;">
+<section class="vh-100" style="background-color: #9A616D;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-xl-10">
-        <div class="card rounded-3 text-black">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
-
-                <div class="text-center">
-                  <img src="https://s2.ppllstatics.com/elcorreo/www/multimedia/202109/09/media/cortadas/gimnasio-kAKB-U1504653835850pD-1968x1216@RC.jpg"
-                    style="width: 400px;" alt="">
-                  <h4 class="mt-1 mb-5 pb-1">Hospedajes RL</h4>
-                </div>
-
-                <form>
-                  <p>Ingrese en su cuenta</p>
-
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
-                      placeholder="Numero de telefono o Email" />
-                    <label class="form-label" for="form2Example11">Nombre de usuario</label>
-                  </div>
-
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" />
-                    <label class="form-label" for="form2Example22">Contraseña</label>
-                  </div>
-
-                </form>
-
-              </div>
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://img.freepik.com/fotos-premium/foto-enfoque-barra-sobre-acogedor-fondo-borroso-noche_980736-3001.jpg?w=360"
+                alt="login form" style="width: 450px;" alt="logo">
             </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-black px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">Una compañia hotelera</h4>
-                <p class="small mb-0">Venga y disfrute de unas buenas vacaciones sabemos que usted
-                    se lo merece, venga y disfrute de unas relajantes vacaciones junto a su 
-                    familia.</p>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <span class="h1 fw-bold mb-0">GYM</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <span class="h3 fw-bold mb-0">INICIAR SESION</span>
+                  </div>                  
+                  <div class="form-outline mb-4">
+                      <input type="text" name="nombre_usuario" id="form2Example17" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example17">Nombre de Empleado</label>
+                  </div>
+                  <div class="form-outline mb-4">
+                      <input type="password" name="clave" id="form2Example27" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example27">Clave</label>
+                  </div>
+                  <div class="pt-1 mb-4">
+                      <button class="btn btn-dark btn-lg btn-block" type="submit">Iniciar sesión</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

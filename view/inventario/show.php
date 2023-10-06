@@ -1,11 +1,9 @@
 <?php
 require_once("c://wamp64/www/sistema_gym/view/head/head.php");
 require_once("c://wamp64/www/sistema_gym/controller/inventarioController.php");
-require_once("c://wamp64/www/sistema_gym/controller/empleadosController.php");
 
-$objEmpleados = new empleadosController();
-$obj = new inventarioController();
-$registro = $obj->show($_GET['id']);
+$objInventario = new inventarioController();
+$registro = $objInventario->show($_GET['id']);
 ?>
 
 <h2 class="text-center">Detalles del registro</h2>
@@ -22,7 +20,7 @@ $registro = $obj->show($_GET['id']);
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar el registro?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Una vez eliminado no se podrá recuperar el registro...
@@ -43,7 +41,6 @@ $registro = $obj->show($_GET['id']);
             <strong>CODIGO: </strong><?= $registro['idinventario'] ?><br>
             <strong>NOMBRE DEL OBJETO/MAQUINA: </strong><?= $registro['nombre'] ?><br>
             <strong>ESTADO: </strong><?= ($registro['estado'] == 1) ? 'Activo' : 'Inactivo' ?><br>
-            <strong>EMPLEADO RESPONSABLE: </strong><?= $objEmpleados->obtenerNombreEmpleado($registro['idempleados']) ?><br>
         </p>
     </div>
 </div>
